@@ -1,0 +1,812 @@
+{
+	"ExperimentId": "abea56e0cdb841b597321e6fe9086956.f-id.96160099cb2d4ec3849e15700d94949f",
+	"RunId": null,
+	"ParentExperimentId": "abea56e0cdb841b597321e6fe9086956.s-id.96160099cb2d4ec3849e15700d94949f.9951-03-05t02.09.09",
+	"OriginalExperimentDocumentationLink": null,
+	"Summary": "Linear regression",
+	"Description": "Regression",
+	"Graph": {
+		"ModuleNodes": [{
+				"Id": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-133",
+				"ModuleId": "506153734175476c4f62416c57734963.70530644c97a4ab685f788bf30a8be5f.v1-default-1716",
+				"Comment": "75% for training (left)\n25% for scoring (right)",
+				"CommentCollapsed": false,
+				"Language": "DotNet",
+				"Version": "4.5.0",
+				"UsePreviousResults": false,
+				"ModuleParameters": [{
+						"ValueType": "Literal",
+						"LinkedGlobalParameter": null,
+						"Name": "Splitting mode",
+						"Value": "Split Rows"
+					}, {
+						"ValueType": "Literal",
+						"LinkedGlobalParameter": null,
+						"Name": "Fraction of rows in the first output dataset",
+						"Value": "0.75"
+					}, {
+						"ValueType": "Literal",
+						"LinkedGlobalParameter": null,
+						"Name": "Randomized split",
+						"Value": "True"
+					}, {
+						"ValueType": "Literal",
+						"LinkedGlobalParameter": null,
+						"Name": "Random seed",
+						"Value": "0"
+					}, {
+						"ValueType": "Literal",
+						"LinkedGlobalParameter": null,
+						"Name": "Stratified split",
+						"Value": "False"
+					}
+				],
+				"IsPartOfPartialRun": false,
+				"InputPortsInternal": [{
+						"Name": "Dataset",
+						"DataSourceId": "abea56e0cdb841b597321e6fe9086956.1e96e0d6676f455db94755d700605ae9.v1-default-5",
+						"TrainedModelId": null,
+						"TransformModuleId": null,
+						"Language": "DotNet",
+						"Version": "4.5.0",
+						"PortIndex": null,
+						"NodeId": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-133"
+					}
+				],
+				"OutputPortsInternal": [{
+						"Name": "Results dataset1",
+						"NodeId": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-133",
+						"OutputType": null
+					}, {
+						"Name": "Results dataset2",
+						"NodeId": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-133",
+						"OutputType": null
+					}
+				]
+			}, {
+				"Id": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-151",
+				"ModuleId": "506153734175476c4f62416c57734963.31960a6f789b4cf788d62e1152c0bd1a.v1-default-1684",
+				"Comment": "",
+				"CommentCollapsed": true,
+				"Language": "DotNet",
+				"Version": "4.5.0",
+				"UsePreviousResults": false,
+				"ModuleParameters": [{
+						"ValueType": "Literal",
+						"LinkedGlobalParameter": null,
+						"Name": "Solution method",
+						"Value": "Ordinary Least Squares"
+					}, {
+						"ValueType": "Literal",
+						"LinkedGlobalParameter": null,
+						"Name": "L2 regularization weight",
+						"Value": "0.001"
+					}, {
+						"ValueType": "Literal",
+						"LinkedGlobalParameter": null,
+						"Name": "Include intercept term",
+						"Value": "True"
+					}, {
+						"ValueType": "Literal",
+						"LinkedGlobalParameter": null,
+						"Name": "Random number seed",
+						"Value": ""
+					}, {
+						"ValueType": "Literal",
+						"LinkedGlobalParameter": null,
+						"Name": "Allow unknown levels in categorical features",
+						"Value": "True"
+					}
+				],
+				"IsPartOfPartialRun": false,
+				"InputPortsInternal": [],
+				"OutputPortsInternal": [{
+						"Name": "Untrained model",
+						"NodeId": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-151",
+						"OutputType": null
+					}
+				]
+			}, {
+				"Id": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-170",
+				"ModuleId": "506153734175476c4f62416c57734963.5cc7053eaa30450d96c0dae4be720977.v1-default-1562",
+				"Comment": "",
+				"CommentCollapsed": true,
+				"Language": "DotNet",
+				"Version": "4.5.0",
+				"UsePreviousResults": false,
+				"ModuleParameters": [{
+						"ValueType": "Literal",
+						"LinkedGlobalParameter": null,
+						"Name": "Label column",
+						"Value": "%7B%22isFilter%22%3Atrue%2C%22rules%22%3A%5B%7B%22ruleType%22%3A%22ColumnNames%22%2C%22columns%22%3A%5B%22ARR_DELAY%22%5D%2C%22exclude%22%3Afalse%7D%5D%2C%22ui%22%3A%7B%22withRules%22%3Atrue%7D%7D"
+					}
+				],
+				"IsPartOfPartialRun": false,
+				"InputPortsInternal": [{
+						"Name": "Untrained model",
+						"DataSourceId": null,
+						"TrainedModelId": null,
+						"TransformModuleId": null,
+						"Language": "DotNet",
+						"Version": "4.5.0",
+						"PortIndex": null,
+						"NodeId": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-170"
+					}, {
+						"Name": "Dataset",
+						"DataSourceId": null,
+						"TrainedModelId": null,
+						"TransformModuleId": null,
+						"Language": "DotNet",
+						"Version": "4.5.0",
+						"PortIndex": null,
+						"NodeId": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-170"
+					}
+				],
+				"OutputPortsInternal": [{
+						"Name": "Trained model",
+						"NodeId": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-170",
+						"OutputType": null
+					}
+				]
+			}, {
+				"Id": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-175",
+				"ModuleId": "506153734175476c4f62416c57734963.401b4f92e7244d5abe81d5b0ff9bdb33.v1-default-1730",
+				"Comment": "",
+				"CommentCollapsed": true,
+				"Language": "DotNet",
+				"Version": "4.5.0",
+				"UsePreviousResults": false,
+				"ModuleParameters": [{
+						"ValueType": "Literal",
+						"LinkedGlobalParameter": null,
+						"Name": "Append score columns to output",
+						"Value": "True"
+					}
+				],
+				"IsPartOfPartialRun": false,
+				"InputPortsInternal": [{
+						"Name": "Trained model",
+						"DataSourceId": null,
+						"TrainedModelId": null,
+						"TransformModuleId": null,
+						"Language": "DotNet",
+						"Version": "4.5.0",
+						"PortIndex": null,
+						"NodeId": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-175"
+					}, {
+						"Name": "Dataset",
+						"DataSourceId": null,
+						"TrainedModelId": null,
+						"TransformModuleId": null,
+						"Language": "DotNet",
+						"Version": "4.5.0",
+						"PortIndex": null,
+						"NodeId": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-175"
+					}
+				],
+				"OutputPortsInternal": [{
+						"Name": "Scored dataset",
+						"NodeId": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-175",
+						"OutputType": null
+					}
+				]
+			}, {
+				"Id": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-180",
+				"ModuleId": "506153734175476c4f62416c57734963.927d65ac3b504694990320f6c1672089.v1-default-1740",
+				"Comment": "",
+				"CommentCollapsed": true,
+				"Language": "DotNet",
+				"Version": "4.5.0",
+				"UsePreviousResults": false,
+				"ModuleParameters": [],
+				"IsPartOfPartialRun": false,
+				"InputPortsInternal": [{
+						"Name": "Scored dataset",
+						"DataSourceId": null,
+						"TrainedModelId": null,
+						"TransformModuleId": null,
+						"Language": "DotNet",
+						"Version": "4.5.0",
+						"PortIndex": null,
+						"NodeId": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-180"
+					}, {
+						"Name": "Scored dataset to compare",
+						"DataSourceId": null,
+						"TrainedModelId": null,
+						"TransformModuleId": null,
+						"Language": "DotNet",
+						"Version": "4.5.0",
+						"PortIndex": null,
+						"NodeId": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-180"
+					}
+				],
+				"OutputPortsInternal": [{
+						"Name": "Evaluation results",
+						"NodeId": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-180",
+						"OutputType": null
+					}
+				]
+			}
+		],
+		"SerializedClientData": "<?xml version='1.0' encoding='utf-16'?><DataV1 xmlns:xsd='http://www.w3.org/2001/XMLSchema' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'><Meta /><NodePositions><NodePosition Node='d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-133' Position='312,485,200,200'/><NodePosition Node='abea56e0cdb841b597321e6fe9086956.1e96e0d6676f455db94755d700605ae9.v1-default-5' Position='311,97,200,200'/><NodePosition Node='d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-151' Position='-35,487,200,200'/><NodePosition Node='d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-170' Position='125,667,200,200'/><NodePosition Node='d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-175' Position='308,800,200,200'/><NodePosition Node='d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-180' Position='473,927,200,200'/></NodePositions><NodeGroups /></DataV1>",
+		"PublishInfo": null,
+		"Parameters": null,
+		"EdgesInternal": [{
+				"SourceOutputPortId": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-133:Results dataset1",
+				"DestinationInputPortId": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-170:Dataset",
+				"DestinationInputPortIndex": null
+			}, {
+				"SourceOutputPortId": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-133:Results dataset2",
+				"DestinationInputPortId": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-175:Dataset",
+				"DestinationInputPortIndex": null
+			}, {
+				"SourceOutputPortId": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-151:Untrained model",
+				"DestinationInputPortId": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-170:Untrained model",
+				"DestinationInputPortIndex": null
+			}, {
+				"SourceOutputPortId": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-170:Trained model",
+				"DestinationInputPortId": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-175:Trained model",
+				"DestinationInputPortIndex": null
+			}, {
+				"SourceOutputPortId": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-175:Scored dataset",
+				"DestinationInputPortId": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-180:Scored dataset",
+				"DestinationInputPortIndex": null
+			}
+		]
+	},
+	"Status": {
+		"StatusCode": "InDraft",
+		"StatusDetail": "None",
+		"CreationTime": "\/Date(1540851495361)\/",
+		"StartTime": "\/Date(-62135596800000)\/",
+		"EndTime": "\/Date(-62135596800000)\/",
+		"Metadata": null
+	},
+	"Etag": "W/\"datetime'2018-10-29T22%3A18%3A15.3879096Z'\"",
+	"NodeStatuses": [{
+			"NodeId": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-10332",
+			"Status": {
+				"StatusCode": "Finished",
+				"StatusDetail": "None",
+				"CreationTime": "\/Date(1540811308766)\/",
+				"StartTime": "\/Date(1540811310794)\/",
+				"EndTime": "\/Date(1540811313328)\/",
+				"Metadata": {
+					"Untrained model": [{
+							"Name": "visualization",
+							"Value": "experimentoutput/178ff389-17fc-409c-abf1-1052e9540fac/e2399115-fe25-4f39-b072-eb0db137ca73"
+						}, {
+							"Name": "runtimeinfo",
+							"Value": "experimentoutput/178ff389-17fc-409c-abf1-1052e9540fac/e28134b6-f3d7-4d13-aeda-de9cfcbe43e3"
+						}
+					]
+				}
+			},
+			"StandardErrorEndpoint": {
+				"BaseUri": "https://studio.azureml.net/",
+				"Size": 90,
+				"Name": "defaultSasName",
+				"EndpointType": "SasEndpoint",
+				"CredentialContainer": "Inline",
+				"AccessCredential": "?workspaceId=abea56e0cdb841b597321e6fe9086956&signature=dK5m%2BD2ZCEW8aWpDP6Vpjvx1lKCDeVgKKH7BXXobiNM%3D&sharedAccessUri=https%3A%2F%2Fesprodussouth001.blob.core.windows.net%2Fexperimentoutput%2Fe9328308-4c46-4fa5-96ea-f5a651375cee%2Fe9328308-4c46-4fa5-96ea-f5a651375cee.txt%3Fsv%3D2015-02-21%26sr%3Db%26sig%3DYBQmtPExu7LVqUXvbOb4K2PYpc4ddvAyXr2IWiAleWI%3D%26st%3D2018-10-29T22%3A13%3A25Z%26se%3D2018-10-30T22%3A18%3A25Z%26sp%3Dr",
+				"Location": "api/sharedaccess",
+				"FileType": "File",
+				"IsAuxiliary": false
+			},
+			"StandardOutEndpoint": {
+				"BaseUri": "https://studio.azureml.net/",
+				"Size": 9766,
+				"Name": "defaultSasName",
+				"EndpointType": "SasEndpoint",
+				"CredentialContainer": "Inline",
+				"AccessCredential": "?workspaceId=abea56e0cdb841b597321e6fe9086956&signature=VEr%2Fg7om%2BQiLJLCoTNHVnSvI2gZj0QkkU8j27Uj61ac%3D&sharedAccessUri=https%3A%2F%2Fesprodussouth001.blob.core.windows.net%2Fexperimentoutput%2Fbd763c7c-32dc-43ab-8d2f-8b464bb4693f%2Fbd763c7c-32dc-43ab-8d2f-8b464bb4693f.txt%3Fsv%3D2015-02-21%26sr%3Db%26sig%3DAxZ59XAgr7EYPVjgwkRFHVYqZakzoHUebczqUviRoU0%3D%26st%3D2018-10-29T22%3A13%3A25Z%26se%3D2018-10-30T22%3A18%3A25Z%26sp%3Dr",
+				"Location": "api/sharedaccess",
+				"FileType": "File",
+				"IsAuxiliary": false
+			},
+			"OutputEndpoints": [{
+					"BaseUri": "https://studio.azureml.net/",
+					"Size": 5683,
+					"Name": "Untrained model",
+					"EndpointType": "SasEndpoint",
+					"CredentialContainer": "Inline",
+					"AccessCredential": "?workspaceId=abea56e0cdb841b597321e6fe9086956&signature=1CyMoTHVRiF6Rtw9%2B3pWjr6idwR7zEnIKeZj8VGsgGw%3D&sharedAccessUri=https%3A%2F%2Fesprodussouthsus.blob.core.windows.net%2Fexperimentoutput%2F178ff389-17fc-409c-abf1-1052e9540fac%2F178ff389-17fc-409c-abf1-1052e9540fac.ilearner%3Fsv%3D2015-02-21%26sr%3Db%26sig%3DLeJwD0jl0QAc3JlQFXYwgKfwepC4IaScLoR3kEURv%2FQ%3D%26st%3D2018-10-29T22%3A13%3A25Z%26se%3D2018-10-30T22%3A18%3A25Z%26sp%3Dr",
+					"Location": "api/sharedaccess",
+					"FileType": "File",
+					"IsAuxiliary": false
+				}
+			],
+			"MetadataOutputEndpoints": {
+				"Untrained model": [{
+						"Key": "visualization",
+						"Value": {
+							"BaseUri": "https://studio.azureml.net/",
+							"Size": -1,
+							"Name": "Untrained model",
+							"EndpointType": "SasEndpoint",
+							"CredentialContainer": "Inline",
+							"AccessCredential": "?workspaceId=abea56e0cdb841b597321e6fe9086956&signature=lWApnmrzIdjbR%2B32CQomyz0Q7aBLZ7lfAnIU1ExYGIk%3D&sharedAccessUri=https%3A%2F%2Fesprodussouthsus.blob.core.windows.net%2Fexperimentoutput%2F178ff389-17fc-409c-abf1-1052e9540fac%2Fe2399115-fe25-4f39-b072-eb0db137ca73%3Fsv%3D2015-02-21%26sr%3Db%26sig%3DpzJ%2BDDjRdCQha5fHBHARr6D39ZE%2BcmRVXg428yGZSgc%3D%26st%3D2018-10-29T22%3A13%3A25Z%26se%3D2018-10-30T22%3A18%3A25Z%26sp%3Dr",
+							"Location": "api/sharedaccess",
+							"FileType": "File",
+							"IsAuxiliary": false
+						}
+					}, {
+						"Key": "runtimeinfo",
+						"Value": {
+							"BaseUri": "https://studio.azureml.net/",
+							"Size": -1,
+							"Name": "Untrained model",
+							"EndpointType": "SasEndpoint",
+							"CredentialContainer": "Inline",
+							"AccessCredential": "?workspaceId=abea56e0cdb841b597321e6fe9086956&signature=%2FpeQ23N4Ls7XJmhkVR5x%2BzoJLSwiK67EqWqEsflAJcw%3D&sharedAccessUri=https%3A%2F%2Fesprodussouthsus.blob.core.windows.net%2Fexperimentoutput%2F178ff389-17fc-409c-abf1-1052e9540fac%2Fe28134b6-f3d7-4d13-aeda-de9cfcbe43e3%3Fsv%3D2015-02-21%26sr%3Db%26sig%3DRykBvziSpJinTrW%2F4uKmGGPdTDUvdUU8OGRAAG9aWlI%3D%26st%3D2018-10-29T22%3A13%3A25Z%26se%3D2018-10-30T22%3A18%3A25Z%26sp%3Dr",
+							"Location": "api/sharedaccess",
+							"FileType": "File",
+							"IsAuxiliary": false
+						}
+					}
+				]
+			}
+		}, {
+			"NodeId": "f313a9e9-5635-41c3-9ee1-7e5cf2334c20-425",
+			"Status": {
+				"StatusCode": "Finished",
+				"StatusDetail": "None",
+				"CreationTime": "\/Date(1540849134950)\/",
+				"StartTime": "\/Date(1540849136382)\/",
+				"EndTime": "\/Date(1540849139692)\/",
+				"Metadata": {
+					"Results dataset": [{
+							"Name": "visualization",
+							"Value": "experimentoutput/87e242d8-ca62-441d-9a9e-bcc14cbe266e/0d10a63e-16d3-4721-89c4-7f6e1672ff5c"
+						}, {
+							"Name": "schema",
+							"Value": "experimentoutput/87e242d8-ca62-441d-9a9e-bcc14cbe266e/4e754c18-ee9f-440c-9dfa-b70f723e7d61"
+						}
+					]
+				}
+			},
+			"StandardErrorEndpoint": {
+				"BaseUri": "https://studio.azureml.net/",
+				"Size": 90,
+				"Name": "defaultSasName",
+				"EndpointType": "SasEndpoint",
+				"CredentialContainer": "Inline",
+				"AccessCredential": "?workspaceId=abea56e0cdb841b597321e6fe9086956&signature=QDYiHDX1pVZisTIOANO1%2FVg4d%2FOhSm8CXME07KySXjs%3D&sharedAccessUri=https%3A%2F%2Fesprodussouth001.blob.core.windows.net%2Fexperimentoutput%2F125e1e41-2649-4838-b23b-9b346427cc79%2F125e1e41-2649-4838-b23b-9b346427cc79.txt%3Fsv%3D2015-02-21%26sr%3Db%26sig%3DJzrnNfRVUU11vzWnRlEia4c0kKByHRALVHAkeQEVBxs%3D%26st%3D2018-10-29T22%3A13%3A25Z%26se%3D2018-10-30T22%3A18%3A25Z%26sp%3Dr",
+				"Location": "api/sharedaccess",
+				"FileType": "File",
+				"IsAuxiliary": false
+			},
+			"StandardOutEndpoint": {
+				"BaseUri": "https://studio.azureml.net/",
+				"Size": 5948,
+				"Name": "defaultSasName",
+				"EndpointType": "SasEndpoint",
+				"CredentialContainer": "Inline",
+				"AccessCredential": "?workspaceId=abea56e0cdb841b597321e6fe9086956&signature=syyyVs6jFxV9N5GdCVLj17CBuAzxeXX27rwHrGmfC60%3D&sharedAccessUri=https%3A%2F%2Fesprodussouth001.blob.core.windows.net%2Fexperimentoutput%2F91c7f21e-e27e-4a7a-ad02-2b82dfbb7b18%2F91c7f21e-e27e-4a7a-ad02-2b82dfbb7b18.txt%3Fsv%3D2015-02-21%26sr%3Db%26sig%3DpgrUl3ysB4uRlslfwDvRvVa7gNpEQFiiNJM%2FtkO37Pc%3D%26st%3D2018-10-29T22%3A13%3A25Z%26se%3D2018-10-30T22%3A18%3A25Z%26sp%3Dr",
+				"Location": "api/sharedaccess",
+				"FileType": "File",
+				"IsAuxiliary": false
+			},
+			"OutputEndpoints": [{
+					"BaseUri": "https://studio.azureml.net/",
+					"Size": 1907558,
+					"Name": "Results dataset",
+					"EndpointType": "SasEndpoint",
+					"CredentialContainer": "Inline",
+					"AccessCredential": "?workspaceId=abea56e0cdb841b597321e6fe9086956&signature=h7g5w6WFbvXiTTGXjjC%2Fn4nXx56fJ8jVq8UB8%2FaK%2BsU%3D&sharedAccessUri=https%3A%2F%2Fesprodussouthsus.blob.core.windows.net%2Fexperimentoutput%2F87e242d8-ca62-441d-9a9e-bcc14cbe266e%2F87e242d8-ca62-441d-9a9e-bcc14cbe266e.dataset%3Fsv%3D2015-02-21%26sr%3Db%26sig%3D%2BCl%2BdlEHmQ3b6WkbaBXxwtDNUvVzzNdUTtj20gT6Ra8%3D%26st%3D2018-10-29T22%3A13%3A25Z%26se%3D2018-10-30T22%3A18%3A25Z%26sp%3Dr",
+					"Location": "api/sharedaccess",
+					"FileType": "File",
+					"IsAuxiliary": false
+				}
+			],
+			"MetadataOutputEndpoints": {
+				"Results dataset": [{
+						"Key": "visualization",
+						"Value": {
+							"BaseUri": "https://studio.azureml.net/",
+							"Size": -1,
+							"Name": "Results dataset",
+							"EndpointType": "SasEndpoint",
+							"CredentialContainer": "Inline",
+							"AccessCredential": "?workspaceId=abea56e0cdb841b597321e6fe9086956&signature=sGcpoqNq%2BR83Ltzqvgmbz1tbwcuQYPOarpXtxLNfH8k%3D&sharedAccessUri=https%3A%2F%2Fesprodussouthsus.blob.core.windows.net%2Fexperimentoutput%2F87e242d8-ca62-441d-9a9e-bcc14cbe266e%2F0d10a63e-16d3-4721-89c4-7f6e1672ff5c%3Fsv%3D2015-02-21%26sr%3Db%26sig%3Dn5G9QlMO%2BXiSPl4C86XwE74fAK64gbiFYGReZJ79CgU%3D%26st%3D2018-10-29T22%3A13%3A25Z%26se%3D2018-10-30T22%3A18%3A25Z%26sp%3Dr",
+							"Location": "api/sharedaccess",
+							"FileType": "File",
+							"IsAuxiliary": false
+						}
+					}, {
+						"Key": "schema",
+						"Value": {
+							"BaseUri": "https://studio.azureml.net/",
+							"Size": -1,
+							"Name": "Results dataset",
+							"EndpointType": "SasEndpoint",
+							"CredentialContainer": "Inline",
+							"AccessCredential": "?workspaceId=abea56e0cdb841b597321e6fe9086956&signature=jejmyph75julQj7fi96T3zqa1R4gSRMM%2Bvx2xyfT7n8%3D&sharedAccessUri=https%3A%2F%2Fesprodussouthsus.blob.core.windows.net%2Fexperimentoutput%2F87e242d8-ca62-441d-9a9e-bcc14cbe266e%2F4e754c18-ee9f-440c-9dfa-b70f723e7d61%3Fsv%3D2015-02-21%26sr%3Db%26sig%3DzXZhNqOjLG8oX0goj2eMaZVdBdhh%2FW5MGnlVgRnZRcw%3D%26st%3D2018-10-29T22%3A13%3A25Z%26se%3D2018-10-30T22%3A18%3A25Z%26sp%3Dr",
+							"Location": "api/sharedaccess",
+							"FileType": "File",
+							"IsAuxiliary": false
+						}
+					}
+				]
+			}
+		}, {
+			"NodeId": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-133",
+			"Status": {
+				"StatusCode": "Finished",
+				"StatusDetail": "Task output was present in output cache",
+				"CreationTime": "\/Date(1540849849638)\/",
+				"StartTime": "\/Date(1540849854594)\/",
+				"EndTime": "\/Date(1540849854594)\/",
+				"Metadata": {
+					"Results dataset1": [{
+							"Name": "visualization",
+							"Value": "experimentoutput/6fb420ca-99ad-4d7c-a583-9439e49beb6c/8c7ea317-5539-4f10-9f5c-2b9d8b24de48"
+						}, {
+							"Name": "schema",
+							"Value": "experimentoutput/6fb420ca-99ad-4d7c-a583-9439e49beb6c/7463b2f3-976a-4038-91c3-6686d03d02dd"
+						}
+					],
+					"Results dataset2": [{
+							"Name": "visualization",
+							"Value": "experimentoutput/1dd18b02-9447-4801-b98a-337f2cc437ef/eda5be20-1fde-45bf-8829-5b6fccd09547"
+						}, {
+							"Name": "schema",
+							"Value": "experimentoutput/1dd18b02-9447-4801-b98a-337f2cc437ef/00ad7f57-2c1e-4000-a69e-98d3003640ce"
+						}
+					]
+				}
+			},
+			"StandardErrorEndpoint": null,
+			"StandardOutEndpoint": null,
+			"OutputEndpoints": [{
+					"BaseUri": "https://studio.azureml.net/",
+					"Size": 7789287,
+					"Name": "Results dataset1",
+					"EndpointType": "SasEndpoint",
+					"CredentialContainer": "Inline",
+					"AccessCredential": "?workspaceId=abea56e0cdb841b597321e6fe9086956&signature=6SoVpRkyOq%2BLlRDaTCrWDOB1x%2F%2BFmy1nhHcAkiMR%2Bqw%3D&sharedAccessUri=https%3A%2F%2Fesprodussouthsus.blob.core.windows.net%2Fexperimentoutput%2F6fb420ca-99ad-4d7c-a583-9439e49beb6c%2F6fb420ca-99ad-4d7c-a583-9439e49beb6c.dataset%3Fsv%3D2015-02-21%26sr%3Db%26sig%3D7PmA%2F%2BP%2F7yYst3kXagWXZCTGj0%2FUpaGiNkYkz1rqU%2FI%3D%26st%3D2018-10-29T22%3A13%3A25Z%26se%3D2018-10-30T22%3A18%3A25Z%26sp%3Dr",
+					"Location": "api/sharedaccess",
+					"FileType": "File",
+					"IsAuxiliary": false
+				}, {
+					"BaseUri": "https://studio.azureml.net/",
+					"Size": 2599412,
+					"Name": "Results dataset2",
+					"EndpointType": "SasEndpoint",
+					"CredentialContainer": "Inline",
+					"AccessCredential": "?workspaceId=abea56e0cdb841b597321e6fe9086956&signature=EdlQ7Oe2is9IKJ8wyfoNQBF0PubVn9iIPoiuzPn7Phc%3D&sharedAccessUri=https%3A%2F%2Fesprodussouthsus.blob.core.windows.net%2Fexperimentoutput%2F1dd18b02-9447-4801-b98a-337f2cc437ef%2F1dd18b02-9447-4801-b98a-337f2cc437ef.dataset%3Fsv%3D2015-02-21%26sr%3Db%26sig%3D8b7oHCt%2BVOu59mCA9YlxlbWYAPzPNlWThPeHy%2FIhO50%3D%26st%3D2018-10-29T22%3A13%3A25Z%26se%3D2018-10-30T22%3A18%3A25Z%26sp%3Dr",
+					"Location": "api/sharedaccess",
+					"FileType": "File",
+					"IsAuxiliary": false
+				}
+			],
+			"MetadataOutputEndpoints": {
+				"Results dataset1": [{
+						"Key": "visualization",
+						"Value": {
+							"BaseUri": "https://studio.azureml.net/",
+							"Size": -1,
+							"Name": "Results dataset1",
+							"EndpointType": "SasEndpoint",
+							"CredentialContainer": "Inline",
+							"AccessCredential": "?workspaceId=abea56e0cdb841b597321e6fe9086956&signature=MzW0wuvPZvbDPQOX4vveHvulA2ivqXY6cEXrP%2F1mzBE%3D&sharedAccessUri=https%3A%2F%2Fesprodussouthsus.blob.core.windows.net%2Fexperimentoutput%2F6fb420ca-99ad-4d7c-a583-9439e49beb6c%2F8c7ea317-5539-4f10-9f5c-2b9d8b24de48%3Fsv%3D2015-02-21%26sr%3Db%26sig%3DhB4AFunrQelod8VCh2Z4LvwjmojavRO1xVh5MDUuffc%3D%26st%3D2018-10-29T22%3A13%3A25Z%26se%3D2018-10-30T22%3A18%3A25Z%26sp%3Dr",
+							"Location": "api/sharedaccess",
+							"FileType": "File",
+							"IsAuxiliary": false
+						}
+					}, {
+						"Key": "schema",
+						"Value": {
+							"BaseUri": "https://studio.azureml.net/",
+							"Size": -1,
+							"Name": "Results dataset1",
+							"EndpointType": "SasEndpoint",
+							"CredentialContainer": "Inline",
+							"AccessCredential": "?workspaceId=abea56e0cdb841b597321e6fe9086956&signature=018DsJ%2F5BHAs8CuYCrEEwlOytvOvwLoHN%2Fjp%2FuzU9QI%3D&sharedAccessUri=https%3A%2F%2Fesprodussouthsus.blob.core.windows.net%2Fexperimentoutput%2F6fb420ca-99ad-4d7c-a583-9439e49beb6c%2F7463b2f3-976a-4038-91c3-6686d03d02dd%3Fsv%3D2015-02-21%26sr%3Db%26sig%3DxS78Vco0iqSFBerrN4WLfg11QN1vrN0YzGMBqFFXpG4%3D%26st%3D2018-10-29T22%3A13%3A25Z%26se%3D2018-10-30T22%3A18%3A25Z%26sp%3Dr",
+							"Location": "api/sharedaccess",
+							"FileType": "File",
+							"IsAuxiliary": false
+						}
+					}
+				],
+				"Results dataset2": [{
+						"Key": "visualization",
+						"Value": {
+							"BaseUri": "https://studio.azureml.net/",
+							"Size": -1,
+							"Name": "Results dataset2",
+							"EndpointType": "SasEndpoint",
+							"CredentialContainer": "Inline",
+							"AccessCredential": "?workspaceId=abea56e0cdb841b597321e6fe9086956&signature=mstHOb64JYwRD3T2ITiAk%2BYuX%2Fabwn%2Bleto%2Bf7wdr9o%3D&sharedAccessUri=https%3A%2F%2Fesprodussouthsus.blob.core.windows.net%2Fexperimentoutput%2F1dd18b02-9447-4801-b98a-337f2cc437ef%2Feda5be20-1fde-45bf-8829-5b6fccd09547%3Fsv%3D2015-02-21%26sr%3Db%26sig%3Dqp99UTXEFolcpC4CM8CSGfKX4OzX0vsyburlH5HbbWA%3D%26st%3D2018-10-29T22%3A13%3A25Z%26se%3D2018-10-30T22%3A18%3A25Z%26sp%3Dr",
+							"Location": "api/sharedaccess",
+							"FileType": "File",
+							"IsAuxiliary": false
+						}
+					}, {
+						"Key": "schema",
+						"Value": {
+							"BaseUri": "https://studio.azureml.net/",
+							"Size": -1,
+							"Name": "Results dataset2",
+							"EndpointType": "SasEndpoint",
+							"CredentialContainer": "Inline",
+							"AccessCredential": "?workspaceId=abea56e0cdb841b597321e6fe9086956&signature=xvI1ZJbeAew7BGx17ikBEMTab7d7V%2BJ0CkbnNj%2BPEDg%3D&sharedAccessUri=https%3A%2F%2Fesprodussouthsus.blob.core.windows.net%2Fexperimentoutput%2F1dd18b02-9447-4801-b98a-337f2cc437ef%2F00ad7f57-2c1e-4000-a69e-98d3003640ce%3Fsv%3D2015-02-21%26sr%3Db%26sig%3D38DAg8lQLVpDotVZ9Gpe2C9Wx5xDFoonDCqy0ISe184%3D%26st%3D2018-10-29T22%3A13%3A25Z%26se%3D2018-10-30T22%3A18%3A25Z%26sp%3Dr",
+							"Location": "api/sharedaccess",
+							"FileType": "File",
+							"IsAuxiliary": false
+						}
+					}
+				]
+			}
+		}, {
+			"NodeId": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-151",
+			"Status": {
+				"StatusCode": "Finished",
+				"StatusDetail": "Task output was present in output cache",
+				"CreationTime": "\/Date(1540849849670)\/",
+				"StartTime": "\/Date(1540849855203)\/",
+				"EndTime": "\/Date(1540849855203)\/",
+				"Metadata": {
+					"Untrained model": [{
+							"Name": "visualization",
+							"Value": "experimentoutput/08798cf1-f1e4-4b9d-979e-08d857dbb870/6d4783b3-f3c9-4dae-ad7d-555a86f46d11"
+						}, {
+							"Name": "runtimeinfo",
+							"Value": "experimentoutput/08798cf1-f1e4-4b9d-979e-08d857dbb870/3f519368-0cfa-4c6f-8bce-b61f35002f4d"
+						}
+					]
+				}
+			},
+			"StandardErrorEndpoint": null,
+			"StandardOutEndpoint": null,
+			"OutputEndpoints": [{
+					"BaseUri": "https://studio.azureml.net/",
+					"Size": 1591,
+					"Name": "Untrained model",
+					"EndpointType": "SasEndpoint",
+					"CredentialContainer": "Inline",
+					"AccessCredential": "?workspaceId=abea56e0cdb841b597321e6fe9086956&signature=%2BsSmoA6mi2%2FNJzzdT21PPIfUf1sUbhQlH%2Bya8QGlD64%3D&sharedAccessUri=https%3A%2F%2Fesprodussouthsus.blob.core.windows.net%2Fexperimentoutput%2F08798cf1-f1e4-4b9d-979e-08d857dbb870%2F08798cf1-f1e4-4b9d-979e-08d857dbb870.ilearner%3Fsv%3D2015-02-21%26sr%3Db%26sig%3DAHSBa0KzXa9ZPxcl%2FL3GLP%2FOcNmSIW%2BNKYm8pS8%2BU8w%3D%26st%3D2018-10-29T22%3A13%3A25Z%26se%3D2018-10-30T22%3A18%3A25Z%26sp%3Dr",
+					"Location": "api/sharedaccess",
+					"FileType": "File",
+					"IsAuxiliary": false
+				}
+			],
+			"MetadataOutputEndpoints": {
+				"Untrained model": [{
+						"Key": "visualization",
+						"Value": {
+							"BaseUri": "https://studio.azureml.net/",
+							"Size": -1,
+							"Name": "Untrained model",
+							"EndpointType": "SasEndpoint",
+							"CredentialContainer": "Inline",
+							"AccessCredential": "?workspaceId=abea56e0cdb841b597321e6fe9086956&signature=DRlveB1qe2X5gMZ9rSociLZLU3%2BQywHcwA9B%2BT9Hxm0%3D&sharedAccessUri=https%3A%2F%2Fesprodussouthsus.blob.core.windows.net%2Fexperimentoutput%2F08798cf1-f1e4-4b9d-979e-08d857dbb870%2F6d4783b3-f3c9-4dae-ad7d-555a86f46d11%3Fsv%3D2015-02-21%26sr%3Db%26sig%3Dc2%2Fg1MmTUGqhVj%2Furmtq52nIoTRGQhsLqf%2FD%2BGpbYWI%3D%26st%3D2018-10-29T22%3A13%3A25Z%26se%3D2018-10-30T22%3A18%3A25Z%26sp%3Dr",
+							"Location": "api/sharedaccess",
+							"FileType": "File",
+							"IsAuxiliary": false
+						}
+					}, {
+						"Key": "runtimeinfo",
+						"Value": {
+							"BaseUri": "https://studio.azureml.net/",
+							"Size": -1,
+							"Name": "Untrained model",
+							"EndpointType": "SasEndpoint",
+							"CredentialContainer": "Inline",
+							"AccessCredential": "?workspaceId=abea56e0cdb841b597321e6fe9086956&signature=1vyyvT9fM74gv9e8u6fXMHq%2F9ftQlph2OJnZw5n6lVQ%3D&sharedAccessUri=https%3A%2F%2Fesprodussouthsus.blob.core.windows.net%2Fexperimentoutput%2F08798cf1-f1e4-4b9d-979e-08d857dbb870%2F3f519368-0cfa-4c6f-8bce-b61f35002f4d%3Fsv%3D2015-02-21%26sr%3Db%26sig%3DdNWuA0LuHqUHH39u%2B%2BKOGbymCM3PpCrzmBy9SmLB30I%3D%26st%3D2018-10-29T22%3A13%3A25Z%26se%3D2018-10-30T22%3A18%3A25Z%26sp%3Dr",
+							"Location": "api/sharedaccess",
+							"FileType": "File",
+							"IsAuxiliary": false
+						}
+					}
+				]
+			}
+		}, {
+			"NodeId": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-170",
+			"Status": {
+				"StatusCode": "Finished",
+				"StatusDetail": "Task output was present in output cache",
+				"CreationTime": "\/Date(1540849849717)\/",
+				"StartTime": "\/Date(1540849855531)\/",
+				"EndTime": "\/Date(1540849855531)\/",
+				"Metadata": {
+					"Trained model": [{
+							"Name": "visualization",
+							"Value": "experimentoutput/add391da-8b94-463b-88b0-f81f78d14d42/267b0b6c-4d43-4c18-afcb-7c8d2cd5066a"
+						}, {
+							"Name": "runtimeinfo",
+							"Value": "experimentoutput/add391da-8b94-463b-88b0-f81f78d14d42/31897597-d436-4d0e-aa58-3f280898540b"
+						}
+					]
+				}
+			},
+			"StandardErrorEndpoint": null,
+			"StandardOutEndpoint": null,
+			"OutputEndpoints": [{
+					"BaseUri": "https://studio.azureml.net/",
+					"Size": 27782,
+					"Name": "Trained model",
+					"EndpointType": "SasEndpoint",
+					"CredentialContainer": "Inline",
+					"AccessCredential": "?workspaceId=abea56e0cdb841b597321e6fe9086956&signature=vFqsfjeRgW0OWOzJjIGseAWwRa%2BwoV0yRk%2BAQA6oM2o%3D&sharedAccessUri=https%3A%2F%2Fesprodussouthsus.blob.core.windows.net%2Fexperimentoutput%2Fadd391da-8b94-463b-88b0-f81f78d14d42%2Fadd391da-8b94-463b-88b0-f81f78d14d42.ilearner%3Fsv%3D2015-02-21%26sr%3Db%26sig%3DfeBJ8M5X5UsicZv0vlr6dRx6QoLzzX9cuNHJUBb8%2B%2FU%3D%26st%3D2018-10-29T22%3A13%3A25Z%26se%3D2018-10-30T22%3A18%3A25Z%26sp%3Dr",
+					"Location": "api/sharedaccess",
+					"FileType": "File",
+					"IsAuxiliary": false
+				}
+			],
+			"MetadataOutputEndpoints": {
+				"Trained model": [{
+						"Key": "visualization",
+						"Value": {
+							"BaseUri": "https://studio.azureml.net/",
+							"Size": -1,
+							"Name": "Trained model",
+							"EndpointType": "SasEndpoint",
+							"CredentialContainer": "Inline",
+							"AccessCredential": "?workspaceId=abea56e0cdb841b597321e6fe9086956&signature=%2B1GtVuAa%2B1Kx1fv6DsWlHo%2Bq5fOjnM7s%2B1kVddPzGN0%3D&sharedAccessUri=https%3A%2F%2Fesprodussouthsus.blob.core.windows.net%2Fexperimentoutput%2Fadd391da-8b94-463b-88b0-f81f78d14d42%2F267b0b6c-4d43-4c18-afcb-7c8d2cd5066a%3Fsv%3D2015-02-21%26sr%3Db%26sig%3DSYCEEdopR%2B1WePzQl%2B69cZMPsavU10stwuge%2Fs9nPkc%3D%26st%3D2018-10-29T22%3A13%3A25Z%26se%3D2018-10-30T22%3A18%3A25Z%26sp%3Dr",
+							"Location": "api/sharedaccess",
+							"FileType": "File",
+							"IsAuxiliary": false
+						}
+					}, {
+						"Key": "runtimeinfo",
+						"Value": {
+							"BaseUri": "https://studio.azureml.net/",
+							"Size": -1,
+							"Name": "Trained model",
+							"EndpointType": "SasEndpoint",
+							"CredentialContainer": "Inline",
+							"AccessCredential": "?workspaceId=abea56e0cdb841b597321e6fe9086956&signature=hiwdnJ2MX3RQCmqYL9w6H5cUxgD%2FmKyrHtb9FFNs0X8%3D&sharedAccessUri=https%3A%2F%2Fesprodussouthsus.blob.core.windows.net%2Fexperimentoutput%2Fadd391da-8b94-463b-88b0-f81f78d14d42%2F31897597-d436-4d0e-aa58-3f280898540b%3Fsv%3D2015-02-21%26sr%3Db%26sig%3DU71YGlodw8krJtoj7E9UlX7KAnGKNIWJZLmGrAK2k3s%3D%26st%3D2018-10-29T22%3A13%3A25Z%26se%3D2018-10-30T22%3A18%3A25Z%26sp%3Dr",
+							"Location": "api/sharedaccess",
+							"FileType": "File",
+							"IsAuxiliary": false
+						}
+					}
+				]
+			}
+		}, {
+			"NodeId": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-175",
+			"Status": {
+				"StatusCode": "Finished",
+				"StatusDetail": "Task output was present in output cache",
+				"CreationTime": "\/Date(1540849849748)\/",
+				"StartTime": "\/Date(1540849855922)\/",
+				"EndTime": "\/Date(1540849855922)\/",
+				"Metadata": {
+					"Scored dataset": [{
+							"Name": "visualization",
+							"Value": "experimentoutput/d9bac048-b4fe-461b-95f7-702a8a275178/2c90824c-ddac-4ae8-b6bc-00854dfb3d5f"
+						}, {
+							"Name": "schema",
+							"Value": "experimentoutput/d9bac048-b4fe-461b-95f7-702a8a275178/348fdbac-01b9-4c26-a227-06dd52032b87"
+						}
+					]
+				}
+			},
+			"StandardErrorEndpoint": null,
+			"StandardOutEndpoint": null,
+			"OutputEndpoints": [{
+					"BaseUri": "https://studio.azureml.net/",
+					"Size": 3955026,
+					"Name": "Scored dataset",
+					"EndpointType": "SasEndpoint",
+					"CredentialContainer": "Inline",
+					"AccessCredential": "?workspaceId=abea56e0cdb841b597321e6fe9086956&signature=0rO9kgXYdVzn6MOUhcbQBslS2p5JKFRtR9I1zvn8rnA%3D&sharedAccessUri=https%3A%2F%2Fesprodussouthsus.blob.core.windows.net%2Fexperimentoutput%2Fd9bac048-b4fe-461b-95f7-702a8a275178%2Fd9bac048-b4fe-461b-95f7-702a8a275178.dataset%3Fsv%3D2015-02-21%26sr%3Db%26sig%3DvWKrV2tMZknBr2kBTnexBJze9Wgdv4xfcf0JfZTPB9s%3D%26st%3D2018-10-29T22%3A13%3A25Z%26se%3D2018-10-30T22%3A18%3A25Z%26sp%3Dr",
+					"Location": "api/sharedaccess",
+					"FileType": "File",
+					"IsAuxiliary": false
+				}
+			],
+			"MetadataOutputEndpoints": {
+				"Scored dataset": [{
+						"Key": "visualization",
+						"Value": {
+							"BaseUri": "https://studio.azureml.net/",
+							"Size": -1,
+							"Name": "Scored dataset",
+							"EndpointType": "SasEndpoint",
+							"CredentialContainer": "Inline",
+							"AccessCredential": "?workspaceId=abea56e0cdb841b597321e6fe9086956&signature=hjS1T4smkli5E3xHyeQPaLfVGdXC12cp4FDf71yNTes%3D&sharedAccessUri=https%3A%2F%2Fesprodussouthsus.blob.core.windows.net%2Fexperimentoutput%2Fd9bac048-b4fe-461b-95f7-702a8a275178%2F2c90824c-ddac-4ae8-b6bc-00854dfb3d5f%3Fsv%3D2015-02-21%26sr%3Db%26sig%3Dv%2BxF0egHKTiiMXkB6EyQrBqS95GgerJ2EzPrPjEAhyM%3D%26st%3D2018-10-29T22%3A13%3A25Z%26se%3D2018-10-30T22%3A18%3A25Z%26sp%3Dr",
+							"Location": "api/sharedaccess",
+							"FileType": "File",
+							"IsAuxiliary": false
+						}
+					}, {
+						"Key": "schema",
+						"Value": {
+							"BaseUri": "https://studio.azureml.net/",
+							"Size": -1,
+							"Name": "Scored dataset",
+							"EndpointType": "SasEndpoint",
+							"CredentialContainer": "Inline",
+							"AccessCredential": "?workspaceId=abea56e0cdb841b597321e6fe9086956&signature=1QDB28QzfvEEJsG7ZZ7OUZahOgFhSm0iAKY7fyFkA9g%3D&sharedAccessUri=https%3A%2F%2Fesprodussouthsus.blob.core.windows.net%2Fexperimentoutput%2Fd9bac048-b4fe-461b-95f7-702a8a275178%2F348fdbac-01b9-4c26-a227-06dd52032b87%3Fsv%3D2015-02-21%26sr%3Db%26sig%3DE%2B%2BiyxGeUBsiiaDqgRTfJ7g2PgZyOsr8vHRfSyx8KlE%3D%26st%3D2018-10-29T22%3A13%3A25Z%26se%3D2018-10-30T22%3A18%3A25Z%26sp%3Dr",
+							"Location": "api/sharedaccess",
+							"FileType": "File",
+							"IsAuxiliary": false
+						}
+					}
+				]
+			}
+		}, {
+			"NodeId": "d70d4b2c-a5fa-42a5-b8dd-dd13243f0ea3-180",
+			"Status": {
+				"StatusCode": "Finished",
+				"StatusDetail": "Task output was present in output cache",
+				"CreationTime": "\/Date(1540849849779)\/",
+				"StartTime": "\/Date(1540849856408)\/",
+				"EndTime": "\/Date(1540849856408)\/",
+				"Metadata": {
+					"Evaluation results": [{
+							"Name": "visualization",
+							"Value": "experimentoutput/bcd9002d-d9b3-40f3-9fc4-2bd16bdd6666/93d1d3ab-bdde-46e0-8dda-cb47db4625be"
+						}, {
+							"Name": "schema",
+							"Value": "experimentoutput/bcd9002d-d9b3-40f3-9fc4-2bd16bdd6666/e8e47da7-3c3c-4fac-9520-fe9007d19bc1"
+						}
+					]
+				}
+			},
+			"StandardErrorEndpoint": null,
+			"StandardOutEndpoint": null,
+			"OutputEndpoints": [{
+					"BaseUri": "https://studio.azureml.net/",
+					"Size": 4033,
+					"Name": "Evaluation results",
+					"EndpointType": "SasEndpoint",
+					"CredentialContainer": "Inline",
+					"AccessCredential": "?workspaceId=abea56e0cdb841b597321e6fe9086956&signature=fyXF1JKO%2BontcnMUHnOB5L7TmJgDZLIwbipOos6VdTk%3D&sharedAccessUri=https%3A%2F%2Fesprodussouthsus.blob.core.windows.net%2Fexperimentoutput%2Fbcd9002d-d9b3-40f3-9fc4-2bd16bdd6666%2Fbcd9002d-d9b3-40f3-9fc4-2bd16bdd6666.dataset%3Fsv%3D2015-02-21%26sr%3Db%26sig%3DeSBZM7JWxjjvKMojf3a0MlgVyXE1g5O%2FKJVM78KXSqE%3D%26st%3D2018-10-29T22%3A13%3A25Z%26se%3D2018-10-30T22%3A18%3A25Z%26sp%3Dr",
+					"Location": "api/sharedaccess",
+					"FileType": "File",
+					"IsAuxiliary": false
+				}
+			],
+			"MetadataOutputEndpoints": {
+				"Evaluation results": [{
+						"Key": "visualization",
+						"Value": {
+							"BaseUri": "https://studio.azureml.net/",
+							"Size": -1,
+							"Name": "Evaluation results",
+							"EndpointType": "SasEndpoint",
+							"CredentialContainer": "Inline",
+							"AccessCredential": "?workspaceId=abea56e0cdb841b597321e6fe9086956&signature=dS3HYD7up8jNTtsb777iIwVMyDwA6LFKeOfsZBrFRu4%3D&sharedAccessUri=https%3A%2F%2Fesprodussouthsus.blob.core.windows.net%2Fexperimentoutput%2Fbcd9002d-d9b3-40f3-9fc4-2bd16bdd6666%2F93d1d3ab-bdde-46e0-8dda-cb47db4625be%3Fsv%3D2015-02-21%26sr%3Db%26sig%3DFToQ%2BeBgNxh%2FdgIPquIVk4kFXavcrfMQnyJeVoerpwE%3D%26st%3D2018-10-29T22%3A13%3A25Z%26se%3D2018-10-30T22%3A18%3A25Z%26sp%3Dr",
+							"Location": "api/sharedaccess",
+							"FileType": "File",
+							"IsAuxiliary": false
+						}
+					}, {
+						"Key": "schema",
+						"Value": {
+							"BaseUri": "https://studio.azureml.net/",
+							"Size": -1,
+							"Name": "Evaluation results",
+							"EndpointType": "SasEndpoint",
+							"CredentialContainer": "Inline",
+							"AccessCredential": "?workspaceId=abea56e0cdb841b597321e6fe9086956&signature=FmkmBuq6ZyctAdqSrR42nqY8e4um49%2Bx5G3MjisXkxs%3D&sharedAccessUri=https%3A%2F%2Fesprodussouthsus.blob.core.windows.net%2Fexperimentoutput%2Fbcd9002d-d9b3-40f3-9fc4-2bd16bdd6666%2Fe8e47da7-3c3c-4fac-9520-fe9007d19bc1%3Fsv%3D2015-02-21%26sr%3Db%26sig%3D6bEEusZLrOX%2BmHITSh%2BN9pjSnPspf2gLdKBAmcZio0c%3D%26st%3D2018-10-29T22%3A13%3A25Z%26se%3D2018-10-30T22%3A18%3A25Z%26sp%3Dr",
+							"Location": "api/sharedaccess",
+							"FileType": "File",
+							"IsAuxiliary": false
+						}
+					}
+				]
+			}
+		}
+	],
+	"Creator": "MYERSJO",
+	"IsLeaf": true,
+	"DisableNodesUpdate": null,
+	"WebService": {
+		"IsWebServiceExperiment": false,
+		"Inputs": [],
+		"Outputs": [],
+		"Parameters": [],
+		"WebServiceGroupId": null,
+		"ModelPackageId": null,
+		"RunId": null,
+		"SerializedClientData": "<?xml version='1.0' encoding='utf-16'?><DataV1 xmlns:xsd='http://www.w3.org/2001/XMLSchema' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'><Meta /><NodePositions></NodePositions><NodeGroups /></DataV1>",
+		"ArmWebServiceId": null
+	},
+	"Category": "user",
+	"Tags": [],
+	"IsPartialRun": false
+}
